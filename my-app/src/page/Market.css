@@ -58,6 +58,11 @@
   flex-wrap: wrap;
 }
 
+.CategoryScroll {
+    display: flex;
+    gap: 0.8rem;
+  }
+
 .CategoryButton {
   padding: 0.6rem 1.2rem;
   border: 1px solid #e0e0e0;
@@ -206,11 +211,11 @@
   
   /* '검색:' 글자가 튀어나오는 문제 해결 */
   .SearchPrefix {
-    font-size: 14px; 
+    display: none; 
   }
 
   .SearchDivider {
-    margin: 0 8px; /* 구분선 여백 조정 */
+    display: none;
   }
 
   /* '상품 등록' 버튼이 아래로 오도록 너비 조정 */
@@ -233,5 +238,20 @@
 
   .ProductPrice {
     font-size: 1rem;
+  }
+
+  .CategoryScroll {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .CategoryFilter {
+    overflow: scroll;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .CategoryFilter::-webkit-scrollbar{
+    display: none; 
   }
 }

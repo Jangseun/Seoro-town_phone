@@ -151,15 +151,17 @@ function Market() {
                 </div>
 
                 <div className="CategoryFilter">
-                    {categories.map(category => (
-                        <button 
-                            key={category}
-                            className={`CategoryButton ${selectedCategory === category ? 'active' : ''}`}
-                            onClick={() => setSelectedCategory(category)}
-                        >
-                            {category}
-                        </button>
-                    ))}
+                    <div className="CategoryScroll">
+                        {categories.map(category => (
+                            <button 
+                                key={category}
+                                className={`CategoryButton ${selectedCategory === category ? 'active' : ''}`}
+                                onClick={() => setSelectedCategory(category)}
+                            >
+                                {category}
+                            </button>
+                        ))}
+                    </div>
                 </div>
                 
                 {loading && <p>로딩 중...</p>}
